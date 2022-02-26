@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoApp | Firebase9</title>
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Roboto+Condensed:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font-awsome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <!-- style sheet and media -->
+    <link rel="stylesheet" href="./dist/style.css" />
+    <link rel="stylesheet" href="./dist/media.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="container">
+      <div class="header">
+        <div class="text">TODO</div>
+        <div class="icon"></div>
+      </div>
+      <div class="new-todo">
+        <div class="check">
+          <div class="check-mark"></div>
+        </div>
+        <div class="todo-input">
+          <form>
+            <input type="text" id="todo" placeholder="What You have plan ?" />
+          </form>
+        </div>
+      </div>
+      <div class="todo-wrapper">
+        <div class="todo-items">
+          <div class="todo-item new-todo">
+            <div class="check">
+              <div class="check-mark">
+                <img src="./images/icon-check.svg" alt="tick" />
+              </div>
+            </div>
+            <div class="todo-text todo-input">
+              <form>
+                <input
+                  type="text"
+                  id="user-todo"
+                  value="my first demo todo"
+                  readonly
+                />
+              </form>
+              <div class="todo-hover-icons">
+                <div class="edit-box">
+                  <div class="edit-todo">
+                    <!-- edit icon -->
+                  </div>
+                </div>
+                <div class="delete-box">
+                  <div class="delete-todo">
+                    <!-- delete-icon -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="todo-info">
+          <div class="items-left"><strong>5</strong> items left</div>
+          <div class="items-statuses">
+            <span id="all" class="active">All</span>
+            <span id="active">Active</span>
+            <span id="completed">Completed</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./dist/bundle.js"></script>
+  </body>
+</html>

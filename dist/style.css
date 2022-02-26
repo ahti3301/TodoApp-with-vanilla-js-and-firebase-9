@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: hsl(235, 21%, 11%);
+  overflow-x: hidden;
+}
+.bg {
+  width: 100%;
+  background: url(../images/bg-desktop-dark.jpg) no-repeat left center/cover;
+  height: 320px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 80px auto 50px auto;
+  padding: 15px 19px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.header .text {
+  color: #fff;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+.icon {
+  background: url(../images/icons8-notebook-64.png) no-repeat center
+    center/cover;
+  width: 51px;
+  height: 52px;
+}
+.new-todo {
+  background-color: hsl(235, 24%, 19%);
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 6px;
+}
+.new-todo .todo-input {
+  width: 100%;
+}
+.new-todo input {
+  background-color: transparent;
+}
+.check {
+  width: 70px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check .check-mark {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid hsl(237, 14%, 26%);
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.check-mark img {
+  display: none;
+}
+.check-mark.checked img {
+  display: block;
+}
+.check .check-mark:hover,
+.check .check-mark.checked {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+}
+.todo-item.checked .todo-hover-icons {
+  display: none;
+}
+
+.todo-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-text form {
+  flex: 1;
+}
+
+.todo-hover-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 155px;
+  flex: 0.8;
+}
+.edit-box {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+  border-radius: 50%;
+}
+.edit-box:hover {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+}
+
+.edit-todo {
+  background: url(../images/icons8-edit-50.png) no-repeat center center/cover;
+  width: 25px;
+  height: 25px;
+
+  visibility: hidden;
+}
+/* we toggle this class at the place of edit todo class in js */
+.save-img {
+  background: url(../images/icon-check.svg) no-repeat center center/cover;
+  width: 25px;
+  height: 25px;
+}
+.delete-box {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+  border-radius: 50%;
+}
+.delete-box:hover {
+  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+}
+.delete-todo {
+  background: url(../images/icons8-delete-white.png) no-repeat center
+    center/cover;
+  width: 25px;
+  height: 25px;
+
+  visibility: hidden;
+}
+
+.todo-input input {
+  width: 100%;
+  height: 30px;
+  font-size: 18.5px;
+  padding: 17px 20px;
+  border-radius: 20px;
+  outline: none;
+  background-color: transparent;
+  color: hsl(234, 39%, 85%);
+  border: none;
+}
+.todo-input input::placeholder {
+  color: hsl(233, 14%, 35%);
+}
+
+.todo-item {
+  border-bottom: 1px solid hsl(237, 14%, 26%);
+  border-radius: 0px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.todo-item input {
+  cursor: pointer;
+}
+.todo-item:hover .edit-todo {
+  visibility: visible;
+}
+.todo-item:hover .delete-todo {
+  visibility: visible;
+}
+.todo-text input.checked {
+  text-decoration: line-through;
+  color: hsl(233, 14%, 35%);
+}
+.todo-item:hover {
+  transform: translateY(-2px);
+  border-color: hsl(235, 24%, 19%);
+  box-shadow: 0px 0px 7px 0px hsl(235, 21%, 11%);
+}
+.todo-wrapper {
+  background-color: hsl(235, 24%, 19%);
+  margin-top: 40px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.4);
+}
+.todo-info {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  color: hsl(233, 14%, 35%);
+  font-weight: normal;
+}
+.todo-info .items-statuses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.todo-info .items-statuses span,
+.items-clear span {
+  padding: 0 5px;
+}
+.todo-info .items-statuses span:hover,
+.active,
+strong {
+  color: hsl(220, 98%, 61%);
+}
+.items-clear {
+  cursor: pointer;
+}
+.items-clear span:hover {
+  color: hsl(220, 98%, 61%);
+}

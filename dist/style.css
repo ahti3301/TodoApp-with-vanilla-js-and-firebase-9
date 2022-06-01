@@ -228,3 +228,6 @@ strong {
 .items-clear span:hover {
   color: hsl(220, 98%, 61%);
 }
+.empty-check {
+  background: unset !important;
+}
